@@ -1,4 +1,3 @@
 # Run project
-Run the following commands to run the project;
-- cd VH-Coach
+Run the following command to run the project;
 - npx expo start
