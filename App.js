@@ -7,7 +7,7 @@ export default function App() {
       <View style={styles.header}>
       <Image 
       style={styles.logo}
-      source={require('./assets/VHCoach-logo-png.png')}
+      source={require('./assets/VHCoach-logopng.png')}
       />
       </View>
       <Image
@@ -56,8 +56,11 @@ const styles = StyleSheet.create({
     zIndex: 101,
   },
   logo: {
+    width: 112,
+    height: 112,
+    resizeMode: "contain",
     position: 'absolute',
-    top: 50,
+    top: 25,
     left: 20,
   },
   body: {
