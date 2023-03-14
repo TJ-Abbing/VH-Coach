@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "notification":{
+         "icon":"./assets/vh-icon.png"
+      },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
