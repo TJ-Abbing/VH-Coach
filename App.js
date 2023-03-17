@@ -31,17 +31,18 @@ export default function App() {
           <Text style={styles.pronouns}>Hij / hem</Text>
           <Text style={styles.description}>LinkedIn Tijger & Influencer</Text>
 
-          {/* Fix the padding on different screens */}
-          <Text style={styles.pillars}>Jouw schrijf plannen</Text>
-          <Text style={styles.pillarPrompts}>
-            Meeting met Reële mensen uitschrijven
-          </Text>
-          <Text style={styles.pillarPrompts}>
-            Hoeveel haargel is te veel haargel?
-          </Text>
-          <Text style={styles.pillarPrompts}>
-            Waarom Moffel en Piertje het beste jeugdprogramma was
-          </Text>
+          <View style={styles.pillarPromptsContainer}>
+            <Text style={styles.pillars}>Jouw schrijf plannen</Text>
+            <Text style={styles.pillarPrompts}>
+              Meeting met Reële mensen uitschrijven
+            </Text>
+            <Text style={styles.pillarPrompts}>
+              Hoeveel haargel is te veel haargel?
+            </Text>
+            <Text style={styles.pillarPrompts}>
+              Waarom Moffel en Piertje het beste jeugdprogramma was
+            </Text>
+          </View>
 
           {/* Instead of making in a touchable opacity button, try an actual alarm with date and time */}
           <TouchableOpacity style={styles.alarmButton}>
@@ -105,7 +106,6 @@ const styles = StyleSheet.create({
   pillars: {
     alignSelf: 'flex-start',
     textAlign: 'left',
-    marginLeft: 25,
     marginTop: 40,
     fontSize: 16,
     fontWeight: 'bold',
@@ -116,7 +116,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignSelf: 'flex-start',
     textAlign: 'left',
-    marginLeft: 15,
     marginTop: 15,
     fontSize: 14,
     width: 330,
