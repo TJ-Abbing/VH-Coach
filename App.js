@@ -1,40 +1,56 @@
-import React from 'react'
-import { StyleSheet, Text, ScrollView, View, Image, TouchableOpacity } from 'react-native'
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  ScrollView,
+  View,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
+
+// Added some eslint based style rules for the code
 
 export default function App() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
-      <Image 
-      style={styles.logo}
-      source={require('./assets/VHCoach-logopng.png')}
-      />
+        <Image
+          style={styles.logo}
+          source={require('./assets/VHCoach-logopng.png')}
+        />
       </View>
       <Image
         style={styles.avatar}
-        source={{ uri: 'https://www.virtuelehelden.nl/wp-content/uploads/2022/09/roel-willemse-linkedin-training.png' }}
+        source={{
+          uri: 'https://www.virtuelehelden.nl/wp-content/uploads/2022/09/roel-willemse-linkedin-training.png',
+        }}
       />
       <View style={styles.body}>
         <View style={styles.bodyContent}>
           <Text style={styles.name}>Hey, Roel!</Text>
           <Text style={styles.pronouns}>Hij / hem</Text>
-          <Text style={styles.description}>
-            LinkedIn Tijger & Influencer
+          <Text style={styles.description}>LinkedIn Tijger & Influencer</Text>
+
+          {/* Fix the padding on different screens */}
+          <Text style={styles.pillars}>Jouw schrijf plannen</Text>
+          <Text style={styles.pillarPrompts}>
+            Meeting met Reële mensen uitschrijven
+          </Text>
+          <Text style={styles.pillarPrompts}>
+            Hoeveel haargel is te veel haargel?
+          </Text>
+          <Text style={styles.pillarPrompts}>
+            Waarom Moffel en Piertje het beste jeugdprogramma was
           </Text>
 
-          <Text style={styles.pillars}>Jouw schrijf plannen</Text>
-          <Text style={styles.pillarPrompts}>Meeting met Reële mensen uitschrijven</Text>
-          <Text style={styles.pillarPrompts}>Hoeveel haargel is te veel haargel?</Text>
-          <Text style={styles.pillarPrompts}>Waarom Moffel en Piertje het beste jeugdprogramma was</Text>
-
-
+          {/* Instead of making in a touchable opacity button, try an actual alarm with date and time */}
           <TouchableOpacity style={styles.alarmButton}>
             <Text>Zet Alarm</Text>
           </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -58,7 +74,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 112,
     height: 112,
-    resizeMode: "contain",
+    resizeMode: 'contain',
     position: 'absolute',
     top: 25,
     left: 20,
@@ -116,4 +132,4 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: '#E6C662',
   },
-})
+});
