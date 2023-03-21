@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "notification":{
-         "icon":"./assets/vh-icon.png"
+         "icon":"./assets/favicon.png"
       },
     "splash": {
       "image": "./assets/splash.png",

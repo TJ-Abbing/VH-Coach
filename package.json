@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-community/datetimepicker": "^6.7.3",
     "expo": "~48.0.6",
     "expo-device": "~5.2.1",
     "expo-notifications": "~0.18.1",
@@ -16,6 +17,7 @@
     "native-notify": "^3.0.4",
     "react": "18.2.0",
     "react-native": "0.71.3",
+    "react-native-date-picker": "^4.2.9",
     "react-native-push-notification": "^8.1.1"
   },
   "devDependencies": {
