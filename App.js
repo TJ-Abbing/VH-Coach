@@ -50,8 +50,8 @@ export default function App() {
     async function schedulePushNotification() {
       await Notifications.scheduleNotificationAsync({
         content: {
-          title: "You got a notification",
-          body: "Write a post for linkedin",
+          title: "Hebbie ff?!?",
+          body: "Tijd om aan je schrijf plannen te werken...",
           data: { data: "goes here" },
         },
         trigger: { 
