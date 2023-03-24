@@ -47,6 +47,22 @@ export default function App() {
       console.log(response);
     });
 
+    async function schedulePushNotification() {
+      await Notifications.scheduleNotificationAsync({
+        content: {
+          title: "You got a notification",
+          body: "Write a post for linkedin",
+          data: { data: "goes here" },
+        },
+        trigger: { 
+          seconds: 300,
+          repeats: true
+         },
+      });
+    }
+
+    schedulePushNotification();
+
     return () => {
       Notifications.removeNotificationSubscription(notificationListener.current);
       Notifications.removeNotificationSubscription(responseListener.current);
@@ -87,11 +103,9 @@ export default function App() {
           </View>
 
           {/* Instead of making in a touchable opacity button, try an actual alarm with date and time */}
-          <TouchableOpacity style={styles.alarmButton}
-            onPress={async () => {
-              await schedulePushNotification();
-            }}
-          />
+          <TouchableOpacity style={styles.alarmButton}>
+            <Text>Zet Alarm</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
@@ -129,20 +143,6 @@ async function registerForPushNotificationsAsync() {
   }
 
   return token;
-}
-
-async function schedulePushNotification() {
-  await Notifications.scheduleNotificationAsync({
-    content: {
-      title: "You got a notification",
-      body: "Write a post for linkedin",
-      data: { data: "goes here" },
-    },
-    trigger: { 
-      seconds: 300,
-      repeats: true
-     },
-  });
 }
 
 const styles = StyleSheet.create({
