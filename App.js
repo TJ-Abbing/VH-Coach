@@ -131,6 +131,8 @@ async function registerForPushNotificationsAsync() {
   return token;
 }
 
+// Make the notification title: "Hebbie ff?!?"
+// Make the notification body: "Tijd om aan je schrijf plannen te werken..."
 async function schedulePushNotification() {
   await Notifications.scheduleNotificationAsync({
     content: {
