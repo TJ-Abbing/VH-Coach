@@ -6,10 +6,7 @@
 
 # Quick start
 Follow the steps below to get started.
-## Navigate to project directory
-```
-cd .\ VH-Coach\
-```
+
 ## Install dependencies
 Installs all packages the app depends on.
 ```
